@@ -32,8 +32,10 @@ class Server extends BaseServer
     protected function allSchemas(): array
     {
         return [
-            // @TODO
+            Comments\CommentSchema::class,
             Posts\PostSchema::class,
+            Tags\TagSchema::class,
+            Users\UserSchema::class,
         ];
     }
 }

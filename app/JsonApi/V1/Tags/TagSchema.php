@@ -10,6 +10,7 @@ use LaravelJsonApi\Eloquent\Filters\WhereIdIn;
 use LaravelJsonApi\Eloquent\Pagination\PagePagination;
 use LaravelJsonApi\Eloquent\Schema;
 
+use LaravelJsonApi\Eloquent\Fields\Str;
 class TagSchema extends Schema
 {
 
@@ -29,6 +30,7 @@ class TagSchema extends Schema
     {
         return [
             ID::make(),
+            Str::make('name'),
             DateTime::make('createdAt')->sortable()->readOnly(),
             DateTime::make('updatedAt')->sortable()->readOnly(),
         ];
